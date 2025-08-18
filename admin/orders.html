@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Pragya Commerce Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Sidebar (same as admin/index.html) -->
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
+                    <h1>Orders</h1>
+                </div>
+                <div class="header-right">
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search orders...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="admin-profile">
+                        <img src="../images/admin-avatar.jpg" alt="Admin">
+                        <span>Admin User</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <div class="page-actions">
+                    <div class="bulk-actions">
+                        <select>
+                            <option>Bulk Actions</option>
+                            <option>Mark as Processing</option>
+                            <option>Mark as Shipped</option>
+                            <option>Mark as Completed</option>
+                            <option>Move to Trash</option>
+                        </select>
+                        <button class="btn">Apply</button>
+                    </div>
+                </div>
+
+                <div class="table-card">
+                    <div class="table-header">
+                        <div class="table-filters">
+                            <div class="filter">
+                                <label>Filter by status:</label>
+                                <select>
+                                    <option>All Statuses</option>
+                                    <option>Pending</option>
+                                    <option>Processing</option>
+                                    <option>Shipped</option>
+                                    <option>Completed</option>
+                                    <option>Cancelled</option>
+                                    <option>Refunded</option>
+                                </select>
+                            </div>
+                            <div class="filter">
+                                <label>Filter by date:</label>
+                                <select>
+                                    <option>All Dates</option>
+                                    <option>Today</option>
+                                    <option>This Week</option>
+                                    <option>This Month</option>
+                                    <option>Last Month</option>
+                                    <option>Custom Range</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <th>Order</th>
+                                    <th>Date</th>
+                                    <th>Customer</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#PRG-2025-1248</td>
+                                    <td>Aug 18, 2025</td>
+                                    <td>John Smith</td>
+                                    <td>$199.99</td>
+                                    <td><span class="status processing">Processing</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="action-btn view"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="action-btn edit"><i class="fas fa-edit"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#PRG-2025-1247</td>
+                                    <td>Aug 17, 2025</td>
+                                    <td>Sarah Johnson</td>
+                                    <td>$349.50</td>
+                                    <td><span class="status shipped">Shipped</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="action-btn view"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="action-btn edit"><i class="fas fa-edit"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#PRG-2025-1246</td>
+                                    <td>Aug 16, 2025</td>
+                                    <td>Michael Brown</td>
+                                    <td>$124.99</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="action-btn view"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="action-btn edit"><i class="fas fa-edit"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#PRG-2025-1245</td>
+                                    <td>Aug 15, 2025</td>
+                                    <td>Emma Davis</td>
+                                    <td>$89.99</td>
+                                    <td><span class="status cancelled">Cancelled</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="action-btn view"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="action-btn edit"><i class="fas fa-edit"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#PRG-2025-1244</td>
+                                    <td>Aug 14, 2025</td>
+                                    <td>Robert Wilson</td>
+                                    <td>$275.00</td>
+                                    <td><span class="status completed">Completed</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="action-btn view"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="action-btn edit"><i class="fas fa-edit"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#PRG-2025-1243</td>
+                                    <td>Aug 13, 2025</td>
+                                    <td>Jennifer Lee</td>
+                                    <td>$156.75</td>
+                                    <td><span class="status shipped">Shipped</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="action-btn view"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="action-btn edit"><i class="fas fa-edit"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>#PRG-2025-1242</td>
+                                    <td>Aug 12, 2025</td>
+                                    <td>David Miller</td>
+                                    <td>$89.99</td>
+                                    <td><span class="status processing">Processing</span></td>
+                                    <td>
+                                        <div class="action-buttons">
+                                            <a href="#" class="action-btn view"><i class="fas fa-eye"></i></a>
+                                            <a href="#" class="action-btn edit"><i class="fas fa-edit"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer">
+                        <div class="table-pagination">
+                            <span>Showing 1 to 7 of 25 entries</span>
+                            <div class="pagination">
+                                <button disabled><i class="fas fa-chevron-left"></i></button>
+                                <button class="active">1</button>
+                                <button>2</button>
+                                <button>3</button>
+                                <button>4</button>
+                                <button><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Order Details Modal -->
+    <div class="modal" id="order-details-modal">
+        <div class="modal-content wide">
+            <div class="modal-header">
+                <h2>Order #PRG-2025-1248</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="order-details">
+                    <div class="order-section">
+                        <h3>General Information</h3>
+                        <div class="order-info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Order Date:</span>
+                                <span class="info-value">August 18, 2025</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Order Status:</span>
+                                <span class="info-value"><span class="status processing">Processing</span></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Customer:</span>
+                                <span class="info-value">John Smith</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email:</span>
+                                <span class="info-value">john.smith@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Phone:</span>
+                                <span class="info-value">(123) 456-7890</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Payment Method:</span>
+                                <span class="info-value">Credit Card</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Transaction ID:</span>
+                                <span class="info-value">PAY-789456123</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-section">
+                        <div class="order-columns">
+                            <div class="order-col">
+                                <h3>Billing Address</h3>
+                                <div class="address-card">
+                                    <p>John Smith</p>
+                                    <p>123 Main Street</p>
+                                    <p>Apt 4B</p>
+                                    <p>New York, NY 10001</p>
+                                    <p>United States</p>
+                                    <p>Phone: (123) 456-7890</p>
+                                    <p>Email: john.smith@example.com</p>
+                                </div>
+                            </div>
+                            <div class="order-col">
+                                <h3>Shipping Address</h3>
+                                <div class="address-card">
+                                    <p>John Smith</p>
+                                    <p>123 Main Street</p>
+                                    <p>Apt 4B</p>
+                                    <p>New York, NY 10001</p>
+                                    <p>United States</p>
+                                    <p>Phone: (123) 456-7890</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-section">
+                        <h3>Order Items</h3>
+                        <div class="order-items-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="product-info">
+                                                <img src="../images/product1-thumb1.jpg" alt="Product">
+                                                <span>Premium Wireless Headphones</span>
+                                            </div>
+                                        </td>
+                                        <td>$199.99</td>
+                                        <td>1</td>
+                                        <td>$199.99</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3">Subtotal:</td>
+                                        <td>$199.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">Shipping:</td>
+                                        <td>$0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">Tax:</td>
+                                        <td>$16.00</td>
+                                    </tr>
+                                    <tr class="total">
+                                        <td colspan="3">Total:</td>
+                                        <td>$215.99</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="order-section">
+                        <h3>Order Notes</h3>
+                        <div class="order-notes">
+                            <div class="note">
+                                <div class="note-header">
+                                    <span class="note-date">August 18, 2025 at 2:45 PM</span>
+                                    <span class="note-author">Customer</span>
+                                </div>
+                                <div class="note-content">
+                                    <p>Please deliver after 5 PM as I won't be home before that.</p>
+                                </div>
+                            </div>
+                            <div class="note">
+                                <div class="note-header">
+                                    <span class="note-date">August 18, 2025 at 3:15 PM</span>
+                                    <span class="note-author">Admin</span>
+                                </div>
+                                <div class="note-content">
+                                    <p>Noted. We'll schedule the delivery accordingly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add-note">
+                            <h4>Add Note</h4>
+                            <textarea placeholder="Add a note about this order..."></textarea>
+                            <div class="note-actions">
+                                <label><input type="checkbox"> Notify customer</label>
+                                <button class="btn">Add Note</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="order-actions">
+                    <select>
+                        <option>Update Status</option>
+                        <option>Processing</option>
+                        <option>Shipped</option>
+                        <option>Completed</option>
+                        <option>Cancelled</option>
+                        <option>Refunded</option>
+                    </select>
+                    <button class="btn">Update</button>
+                    <button class="btn btn-outline">Print Invoice</button>
+                    <button class="btn btn-outline">Email Invoice</button>
+                </div>
+                <button class="btn close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>
