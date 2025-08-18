@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy - Admin Panel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>ShopEasy Admin</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-store"></i> View Store</a></li>
+                    <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="admin-panel">
+            <div class="admin-nav">
+                <button class="tab-btn active" data-tab="products-tab"><i class="fas fa-box-open"></i> Products</button>
+                <button class="tab-btn" data-tab="orders-tab"><i class="fas fa-clipboard-list"></i> Orders</button>
+                <button class="tab-btn" data-tab="settings-tab"><i class="fas fa-cog"></i> Settings</button>
+            </div>
+
+            <div class="admin-content">
+                <div id="products-tab" class="tab-content active">
+                    <div class="admin-header">
+                        <h2><i class="fas fa-box-open"></i> Manage Products</h2>
+                        <button id="add-product-btn" class="btn"><i class="fas fa-plus"></i> Add New Product</button>
+                    </div>
+                    <div class="products-list" id="admin-products-list">
+                        <!-- Products will be loaded here by admin.js -->
+                        <div class="empty-state">
+                            <i class="fas fa-box-open"></i>
+                            <h3>No Products Found</h3>
+                            <p>Add your first product to get started</p>
+                            <button id="add-first-product" class="btn"><i class="fas fa-plus"></i> Add Product</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="orders-tab" class="tab-content">
+                    <div class="admin-header">
+                        <h2><i class="fas fa-clipboard-list"></i> Manage Orders</h2>
+                    </div>
+                    <div class="orders-list" id="admin-orders-list">
+                        <div class="empty-state">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h3>No Orders Found</h3>
+                            <p>Orders will appear here when customers make purchases</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="settings-tab" class="tab-content">
+                    <div class="admin-header">
+                        <h2><i class="fas fa-cog"></i> Store Settings</h2>
+                    </div>
+                    <form id="store-settings-form">
+                        <div class="form-group">
+                            <label for="store-name"><i class="fas fa-store"></i> Store Name</label>
+                            <input type="text" id="store-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tax-rate"><i class="fas fa-percentage"></i> Tax Rate (%)</label>
+                            <input type="number" id="tax-rate" min="0" max="50" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="currency-symbol"><i class="fas fa-dollar-sign"></i> Currency Symbol</label>
+                            <input type="text" id="currency-symbol" maxlength="3" required>
+                        </div>
+                        <button type="submit" class="btn"><i class="fas fa-save"></i> Save Settings</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Modal -->
+        <div id="product-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modal-title"><i class="fas fa-box-open"></i> Add New Product</h2>
+                <form id="product-form">
+                    <input type="hidden" id="product-id">
+                    <div class="form-group">
+                        <label for="product-name"><i class="fas fa-tag"></i> Product Name</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price"><i class="fas fa-dollar-sign"></i> Price</label>
+                        <input type="number" id="product-price" min="0" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-category"><i class="fas fa-list"></i> Category</label>
+                        <input type="text" id="product-category" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-image-upload"><i class="fas fa-image"></i> Product Image</label>
+                        <div class="image-upload-container">
+                            <input type="file" id="product-image-upload" accept="image/*" style="display: none;">
+                            <button type="button" id="upload-btn" class="btn"><i class="fas fa-upload"></i> Choose
+                                Image</button>
+                            <span id="image-name">No image selected</span>
+                            <div id="image-preview-container" style="display: none;">
+                                <img id="image-preview" src="#" alt="Preview">
+                            </div>
+                        </div>
+                        <input type="hidden" id="product-image-url">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description"><i class="fas fa-align-left"></i> Description</label>
+                        <textarea id="product-description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="product-featured">
+                        <label for="product-featured"><i class="fas fa-star"></i> Featured Product</label>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Product</button>
+                        <button type="button" class="btn btn-secondary close-modal-btn"><i class="fas fa-times"></i>
+                            Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> ShopEasy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
