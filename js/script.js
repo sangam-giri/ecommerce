@@ -23,7 +23,7 @@ const products = [
         category: 'Electronics',
         price: 199.99,
         oldPrice: 249.99,
-        image: 'images/product1.jpg',
+        image: 'images/product1.png',
         rating: 4.5,
         reviews: 24,
         featured: true
@@ -33,7 +33,7 @@ const products = [
         name: 'Smart Fitness Tracker',
         category: 'Electronics',
         price: 89.99,
-        image: 'images/product2.jpg',
+        image: 'images/product2.png',
         rating: 4.2,
         reviews: 18,
         featured: true
@@ -43,7 +43,7 @@ const products = [
         name: 'Organic Cotton T-Shirt',
         category: 'Fashion',
         price: 29.99,
-        image: 'images/product3.jpg',
+        image: 'images/product3.png',
         rating: 4.7,
         reviews: 32,
         featured: true
@@ -54,7 +54,7 @@ const products = [
         category: 'Home',
         price: 24.99,
         oldPrice: 34.99,
-        image: 'images/product4.jpg',
+        image: 'images/product4.png',
         rating: 4.8,
         reviews: 15,
         featured: true
@@ -64,7 +64,7 @@ const products = [
         name: 'Wireless Charging Pad',
         category: 'Electronics',
         price: 39.99,
-        image: 'images/product5.jpg',
+        image: 'images/product5.png',
         rating: 4.3,
         reviews: 12
     },
@@ -73,7 +73,7 @@ const products = [
         name: 'Bluetooth Speaker',
         category: 'Electronics',
         price: 79.99,
-        image: 'images/product6.jpg',
+        image: 'images/product6.png',
         rating: 4.6,
         reviews: 21
     },
@@ -82,7 +82,7 @@ const products = [
         name: 'Yoga Mat',
         category: 'Sports',
         price: 34.99,
-        image: 'images/product7.jpg',
+        image: 'images/product7.png',
         rating: 4.4,
         reviews: 8
     },
@@ -91,7 +91,7 @@ const products = [
         name: 'Leather Wallet',
         category: 'Fashion',
         price: 49.99,
-        image: 'images/product8.jpg',
+        image: 'images/product8.png',
         rating: 4.9,
         reviews: 14
     }
